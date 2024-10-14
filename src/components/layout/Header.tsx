@@ -1,9 +1,15 @@
+"use client";
 import { navLinks } from "@/data/data";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import logo from "@/assets/images/herryLogo.png";
+import { signOut, useSession } from "next-auth/react";
+
+import { BiLogIn } from "react-icons/bi";
+import { LuLogOut } from "react-icons/lu";
 const Header = () => {
+  const { data: session, status } = useSession();
   return (
     <header className="mx-2 sm:mx-auto w-full sm:max-w-[80%] px-6 h-[10%] sm:h-[70px] my-2 flex justify-between items-center sm:flex-row flex-col bg-slate-200 rounded">
       <Image
@@ -17,6 +23,27 @@ const Header = () => {
             <Link href={link.url}>{link.text}</Link>
           </li>
         ))}
+        {status === "unauthenticated" ? (
+          <Link href={"/sign-in"}>
+            <BiLogIn className="text-3xl" />
+          </Link>
+        ) : (
+          <div className="flex items-center space-x-4">
+            {session?.user?.image && (
+              <Image
+                src={session.user.image}
+                alt={session.user.name || ""}
+                className="w-10 h-10 rounded-full"
+                width={40}
+                height={40}
+              />
+            )}
+            <h1 className="text-xl md:text-2xl font-bold">
+              {session?.user?.name}
+            </h1>
+            <LuLogOut onClick={() => signOut()} className="text-3xl" />
+          </div>
+        )}
       </ul>
     </header>
   );
