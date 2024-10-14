@@ -1,3 +1,9 @@
+import HomeSection from "@/components/section/homSection/HomeSection";
+
 export default function Home() {
-  return <main>started milestone 4 assignment</main>;
+  return (
+    <main>
+      <HomeSection />
+    </main>
+  );
 }
