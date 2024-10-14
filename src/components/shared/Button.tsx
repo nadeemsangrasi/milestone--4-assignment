@@ -1,12 +1,17 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+
 const Button: React.FC<{
   className?: string;
   label: string;
-}> = ({ label, className }) => {
+  url: string;
+}> = ({ label, className, url }) => {
+  const router = useRouter();
   return (
     <button
-      className={`${className} bg-slate-300 px-6 py-3 rounded-lg font-medium transition duration-300 text-black`}
+      className={`${className} bg-black px-6 py-3 rounded-lg font-medium  transition-colors cursor-pointer text-white`}
+      onClick={() => router.push(url)}
     >
       {label}
     </button>

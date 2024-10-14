@@ -1,12 +1,15 @@
 import Wrapper from "@/components/shared/Wrapper";
 import React from "react";
-import aboutImg from "@/assets/images/home.jpg"; // Use a relevant image for the about section
+import aboutImg from "@/assets/images/home.jpg";
 import Image from "next/image";
 
 const AboutSection = () => {
   return (
     <Wrapper>
-      <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-20 items-center mt-10">
+      <div
+        className="flex flex-col-reverse md:flex-row gap-10 md:gap-20 items-center mt-10"
+        id="about"
+      >
         <div className="w-full md:w-[40%]">
           <Image
             src={aboutImg}

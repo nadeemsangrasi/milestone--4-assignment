@@ -6,16 +6,8 @@ export const navLinks: INavLinks[] = [
     text: "Home",
   },
   {
-    url: "/about",
+    url: "#about",
     text: "About",
-  },
-  {
-    url: "/characters",
-    text: "Characters",
-  },
-  {
-    url: "/houses",
-    text: "Houses",
   },
   {
     url: "/books",

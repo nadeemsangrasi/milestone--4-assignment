@@ -15,7 +15,7 @@ const HomeSection = () => {
             Explore the legendary tales of Hogwarts and discover the magic
             hidden in every book.
           </p>
-          <Button label="Discover the Books" url="/books" />
+          <Button label="Discover the Books" url="/books" className="" />
         </div>
         <div className="w-full md:w-[40%]">
           <Image src={homeImg} alt="home image" className="rounded" />
