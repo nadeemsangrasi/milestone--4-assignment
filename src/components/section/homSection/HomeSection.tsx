@@ -1,7 +1,8 @@
+import Wrapper from "@/components/shared/Wrapper";
 import React from "react";
 
 const HomeSection = () => {
-  return <div>HomeSection</div>;
+  return <Wrapper>HomeSecti</Wrapper>;
 };
 
 export default HomeSection;
