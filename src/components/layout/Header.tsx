@@ -5,15 +5,14 @@ import Link from "next/link";
 import React from "react";
 import logo from "@/assets/images/herryLogo.png";
 import { signOut, useSession } from "next-auth/react";
-
-import { BiLogIn } from "react-icons/bi";
+import { GoSignIn } from "react-icons/go";
 import { LuLogOut } from "react-icons/lu";
 
 const Header = () => {
   const { data: session, status } = useSession();
 
   return (
-    <header className="mx-2 sm:mx-auto w-full sm:max-w-[80%] px-6 h-[10%] sm:h-[70px] my-2 flex justify-between items-center sm:flex-row flex-col bg-slate-200 rounded">
+    <header className="mx-2 sm:mx-auto w-full  px-6 h-[10%] sm:h-[70px] my-2 flex justify-between items-center sm:flex-row flex-col bg-slate-200 rounded sm:max-w-screen-xl ">
       <Image
         src={logo}
         alt="logo"
@@ -29,7 +28,7 @@ const Header = () => {
 
         {status === "unauthenticated" ? (
           <Link href={"/sign-in"}>
-            <BiLogIn className="text-3xl" />
+            <GoSignIn className="text-3xl" />
           </Link>
         ) : (
           <div className="flex items-center space-x-4">

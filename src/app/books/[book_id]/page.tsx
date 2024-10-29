@@ -16,7 +16,7 @@ const BookDetailsPage = async ({ params }: { params: { book_id: string } }) => {
   const book = books.find((b: IBookCard) => b.number.toString() === book_id)!;
 
   return (
-    <div className="min-h-screen  dark:bg-secondary-black p-8 flex items-center justify-center">
+    <div className="min-h-screen  dark:bg-secondary-black p-8 flex items-center justify-center max-w-screen-2xl mx-auto">
       <div className="max-w-3xl mx-auto  bg-slate-300  rounded-lg shadow-lg overflow-hidden ">
         <div className="flex flex-col md:flex-row items-center justify-center p-6">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">

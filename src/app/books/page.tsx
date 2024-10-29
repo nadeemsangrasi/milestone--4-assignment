@@ -6,7 +6,7 @@ import React from "react";
 const BooksPage = async () => {
   const books = await fetchBooks();
   return (
-    <div className="min-h-screen p-6">
+    <div className="max-w-screen-2xl mx-auto p-6">
       <h1 className="text-3xl font-bold text-black dark:text-white mb-6 text-center py-6">
         All Books
       </h1>

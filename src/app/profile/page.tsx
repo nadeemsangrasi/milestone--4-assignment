@@ -10,7 +10,7 @@ const ProfilePage = (): JSX.Element => {
   const { data: session, status } = useSession();
   if (status === "unauthenticated") {
     return (
-      <div className="flex items-center justify-center mt-48 text-3xl font-bold">
+      <div className="flex items-center justify-center mt-48 text-3xl font-bold max-w-screen-2xl mx-auto">
         user not authenticated
       </div>
     );
